@@ -4,20 +4,39 @@
 <html>
 <!-- head = méta-données, des données qui ne s'affichent pas dans la page en tant que telles, mais qui sont nécessaires pour que l'affichage se passe comme prévu -->
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
     <title>Découverte du langage HTML</title>
     <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/langfr-130px-HTML5_logo_and_wordmark.svg.png" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
 </head>
 
 <!-- body = corps de la page, tout ce qu'on voit affiché dans le navigateur -->
 <body>
     <!-- header = en-tête de la page, souvent indentique d'une page à l'autre -->
     <header>
-        Nom du site + barre de navigation
+        <nav class="container">
+            <a href="/">
+                <img id="nav-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/langfr-130px-HTML5_logo_and_wordmark.svg.png" alt="Logo du site" />
+                Nom du site
+            </a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                   <a href="/">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Lien 1</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Lien 2</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <!-- main = contenu principal de la page, souvent spécifique à chaque page -->
-    <main>
+    <main class="container">
         <!-- h* = titres, le chiffre correspond au niveau du titre -->
         <h1>Découverte du langage HTML</h1>
 
@@ -38,11 +57,16 @@
         <!-- strong = un élément de la page qui a une importance particulière -->
         <p><em>Le langage <a href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blank">HTML</a></em>, je sais pas à quoi ça sert mais ça a l'air <strong>trop cool</strong>!</p>
 
-        <p>J'ajoute une deuxième ligne pour le plaisir!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nostrum, maiores quae natus, voluptatem blanditiis voluptas debitis quia minus perferendis et facere iusto ad. In deserunt saepe expedita vel magnam, dolore nobis. Pariatur, at est fuga ab voluptatibus consequuntur, obcaecati inventore, doloribus hic esse maxime laudantium voluptas consequatur nobis quis.</p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptas explicabo consequuntur tempora dignissimos itaque earum illum in vitae veritatis placeat sapiente officia nulla necessitatibus, fugit eos maxime. Vero amet, vel exercitationem sequi voluptatum eligendi sunt. Minima voluptatem commodi officia delectus quisquam numquam autem repellendus quam amet, dignissimos nesciunt temporibus, provident consequuntur dolorum atque tempora possimus sequi eos asperiores excepturi. Non quos, dicta nostrum quod voluptatem laudantium deleniti ut sapiente facere. Iure optio ab pariatur minus a deserunt at sit qui quibusdam corrupti, laudantium ipsum dolore maxime nesciunt eum quod sint numquam inventore! Hic sunt quisquam, nesciunt harum consequuntur error.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum ea dolorem eos porro! Quos quibusdam, et veniam, animi aut saepe ducimus iusto praesentium culpa laborum sapiente doloremque facilis delectus minus. Placeat libero culpa expedita totam est dolorem quibusdam. Illo vero labore cum eaque distinctio. Ad, officiis dolorem consequatur sit officia debitis reiciendis aperiam maxime velit accusamus laboriosam, deserunt ipsum, beatae fuga illum! In, porro a reprehenderit aliquam, dolore illum quos nam ipsum aperiam tempora ab qui libero at alias dolorem blanditiis. Earum voluptatibus iste magnam laboriosam explicabo et iure, adipisci, est ipsum, fugiat deleniti? Voluptatem debitis nihil maxime natus nulla. Perferendis debitis ducimus ex corporis aliquid. Distinctio illo id repudiandae minima quae voluptates necessitatibus, accusantium fugit facilis, quos quisquam quidem.</p>
 
         <h2>Exemple de liste non ordonnée</h2>
         <!-- ul = liste non ordonnée (unordered list) -->
-        <ul>
+        <ul class="list bullet">
+            <!-- li = élément de list (list item) -->
             <li>Oeufs</li>
             <li>Pain</li>
             <li>Farine</li>
@@ -50,7 +74,7 @@
 
         <h2>Exemple de liste ordonnée</h2>
         <!-- ol = liste ordonnée (ordered list) -->
-        <ol>
+        <ol class="list roman">
             <li>Casser les oeufs.</li>
             <li>Séparer le jaune du blanc.</li>
             <li>Manger les oeufs (parce qu'on a très faim).</li>
@@ -59,7 +83,9 @@
 
     <!-- footer = pied de la page, souvent indentique d'une page à l'autre -->
     <footer>
-        &copy; DWWM avril 2021 Grenoble
+        <div class="container">
+            &copy; DWWM avril 2021 Grenoble
+        </div>
     </footer>
 
 </body>
