@@ -86,3 +86,42 @@ footer {
 .list.roman {
     list-style: upper-roman;
 }
+
+.gallery {
+    text-align: center;
+}
+
+.gallery-image {
+    display: inline-block;
+}
+
+.hoverable {
+    position: relative;
+}
+
+.hoverable > img {
+    height: 10em;
+}
+
+.hoverable > figcaption {
+    opacity: 0;
+    background-color: #E54C21;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .3s ease;
+}
+
+.hoverable:hover > figcaption {
+    opacity: 1;
+}
+
+.hoverable > figcaption > div {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
