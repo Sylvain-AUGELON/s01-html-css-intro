@@ -7,6 +7,13 @@ body {
     color: #101010;
 }
 
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(253, 246, 203);
+    border: 1px solid gold;
+    padding: 0 .5em;
+}
+
 /* Cette règle permet de définir l'affichage du titre principal */
 h1 {
     color: blue;
@@ -16,11 +23,16 @@ h1 {
 
 h2 {
     font-size: 1.5em;
-    margin: .75em 0;
+    margin: 2em 0 .75em;
+}
+
+h3 {
+    font-size: 1.25em;
+    margin: 1.5em 0 .5em;
 }
 
 /* Cette règle permet de définir l'affichage de tous les paragraphes */
-p {
+ {
     text-align: justify;
     margin-bottom: 1.5rem;
 }
@@ -42,7 +54,7 @@ footer {
     font-size: .8rem;
 }
 
-/* Cette règle s'applique uniquement à l'élément qui a un id "nav-logo" */
+/* Cette règle s'applique uniquement à l'élé maedndt qui a un id "nav-logo" */
 #nav-logo {
     width: 1.5em;
 }
@@ -124,4 +136,139 @@ footer {
     width: 100%;
     top: 50%;
     transform: translate(0, -50%);
+}
+
+
+/* Ces classes permettent de styler les conteneurs dans les démonstrations des différentes propriétés de Flexbox */
+.demo-container {
+    text-align: center;
+    margin: 1px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: .9em;
+}
+
+.demo-container.padded {
+    padding: .5em 1em;
+}
+
+.demo-container.expanded {
+    min-height: 8em;
+}
+
+.demo-container.blue {
+    background-color: rgb(195, 195, 255);
+    border-color: blue;
+    color: blue;
+}
+
+.demo-container.green {
+    background-color: rgb(198, 255, 198);
+    border-color: rgb(0, 160, 0);
+    color: rgb(0, 160, 0);
+}
+
+.demo-container.purple {
+    background-color: rgb(255, 174, 255);
+    border-color: purple;
+    color: purple;
+}
+
+.demo-container.orange {
+    background-color: rgb(248, 228, 191);
+    border-color: rgb(180, 117, 1);
+    color: rgb(180, 117, 1);
+}
+
+.small {
+    font-size: .8em;
+}
+
+/* Ces classes permettent de tester les différentes propriétés de Flexbox */
+.flex {
+    display: flex;
+}
+
+.flex.justify-content-center {
+    justify-content: center;
+}
+
+/* Chahla: flex-start */
+.flex.justify-content-start {
+    justify-content: start;
+}
+
+/* Rémi: flex-end */
+.flex.justify-content-flex-end {
+    justify-content: flex-end;
+}
+
+/* Mohamed: space-between */
+.flex.justify-content-space-between{
+    justify-content: space-between;
+}
+
+/* Romain: space-around */
+.flex.justify-content-space-around{
+    justify-content: space-around ;
+}
+
+/* MDM: space-evenly */
+.flex.justify-content-space-evenly {
+    justify-content: space-evenly;
+}
+
+/* Julien: flex-direction: row */
+.flex.flex-direction-row {
+    flex-direction: row;
+}
+
+/* Raphael: flex-direction: row-reverse */
+.flex.flex-direction-row-reverse { 
+    flex-direction: row-reverse;
+}
+
+/* Thomas: flex-direction. column */
+.flex.flex-direction-column {
+    flex-direction: column;
+}
+
+/* Hugo: flex-direction: column-reverse */
+.flex.flex-direction-column-reverse {
+    flex-direction: column-reverse;
+}
+
+/* Jonathan: flex-wrap: nowrap */
+.flex.flex-wrap-nowrap{
+    flex-wrap: nowrap;
+}
+
+/* Nicolas: flex-wrap: wrap */
+.flex.flex-wrap-wrap {
+    flex-wrap: wrap;
+}
+
+/* Sylvain */
+.flex.align-items-stretch {
+    align-items: stretch;
+}
+
+.flex.align-items-flex-start {
+    align-items: flex-start;
+}
+
+.flex.align-items-center {
+    align-items: center;
+}
+
+.flex.align-items-flex-end {
+    align-items: flex-end;
+}
+
+.order-minus-1 {
+    order: -1;
+}
+
+.order-plus-1 {
+    order: 1;
 }

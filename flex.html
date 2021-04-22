@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<!-- head = méta-données, des données qui ne s'affichent pas dans la page en tant que telles, mais qui sont nécessaires pour que l'affichage se passe comme prévu -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <!-- title = titre de la page, visible dans l'onglet du navigateur -->
+    <title>Découverte du langage HTML</title>
+    <!-- link = lien vers des ressources externes, permet entre autres de charger les fichiers CSS pour appliquer du style dans la page -->
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/langfr-130px-HTML5_logo_and_wordmark.svg.png" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<!-- body = corps de la page, tout ce qu'on voit affiché dans le navigateur -->
+<body>
+    <!-- header = en-tête de la page, souvent indentique d'une page à l'autre -->
+    <header>
+        <nav class="container">
+            <a href="/">
+                <img id="nav-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/langfr-130px-HTML5_logo_and_wordmark.svg.png" alt="Logo du site" />
+                Nom du site
+            </a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                   <a href="/">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/flex.html">Flex</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Lien 2</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Découverte de Flexbox</h1>
+
+        <section>
+            <h2>Introduction</h2>
+            <p>Depuis l'arrivée de CSS3, nous disposons d'une nouvelle valeur pour la propriété CSS <code>display</code>: « flex ». Cette propriété permet à un élément de contrôler la disposition de <strong>ses enfants</strong>.</p>
+
+            <h3>Sans flex</h3>
+
+            <div class="demo-container purple">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+
+            <h3>Avec flex</h3>
+
+            <div class="demo-container purple flex">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>La propriété <code>justify-content</code></h2>
+            
+            <h3><code>justify-content: flex-start</code> (par défaut)</h3>
+            <div class="demo-container blue flex justify-content-flex-start">
+                <div class="demo-container green padded">Enfant 1</div>
+                <div class="demo-container green padded">Enfant 2</div>
+                <div class="demo-container green padded">Enfant 3</div>
+            </div>
+
+            <h3><code>justify-content: center</code></h3>
+            <div class="demo-container blue flex justify-content-center">
+                <div class="demo-container green padded">Enfant 1</div>
+                <div class="demo-container green padded">Enfant 2</div>
+                <div class="demo-container green padded">Enfant 3</div>
+            </div>    
+
+            <h3><code>justify-content: flex-end</code></h3>
+            <div class="demo-container blue flex justify-content-flex-end">
+                <div class="demo-container green padded">Enfant 1</div>
+                <div class="demo-container green padded">Enfant 2</div>
+                <div class="demo-container green padded">Enfant 3</div>
+            </div>
+            
+            <h3><code>justify-content: space-around</code></h3>
+            <div class="demo-container blue flex justify-content-space-around">
+                <div class="demo-container green padded">Enfant 1</div>
+                <div class="demo-container green padded">Enfant 2</div>
+                <div class="demo-container green padded">Enfant 3</div>
+            </div>
+        
+            <h3><code>justify-content: space-between</code></h3>    
+            <div class="demo-container blue flex justify-content-space-between">
+                <div class="demo-container green padded">Enfant 1</div>
+                <div class="demo-container green padded">Enfant 2</div>
+                <div class="demo-container green padded">Enfant 3</div>
+            </div>
+
+            <h3><code>justify-content: space-evenly</code></h3>
+            <div class="demo-container blue flex justify-content-space-evenly">
+                <div class="demo-container green padded">Enfant 1</div>
+                <div class="demo-container green padded">Enfant 2</div>
+                <div class="demo-container green padded">Enfant 3</div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>La propriété <code>flex-direction</code></h2>
+
+            <h3><code>flex-direction: row</code> (par défaut)</h3>
+            <div class="demo-container purple flex flex-direction-row">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+
+            <h3><code>flex-direction: row-reverse</code></h3>
+            <div class="demo-container purple flex flex-direction-row-reverse">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+
+            <h3><code>flex-direction: column</code></h3>
+            <div class="demo-container purple flex flex-direction-column">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+
+            <h3><code>flex-direction: column-reverse</code></h3>
+            <div class="demo-container purple flex flex-direction-column-reverse">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>La propriété <code>flex-wrap</code></h2>
+
+            <h3><code>flex-wrap: nowrap</code> (par défaut)</h3>
+            <div class="demo-container blue flex flex-wrap-nowrap">
+                <div class="demo-container green padded">Enfant 1</div>
+                <div class="demo-container green padded">Enfant 2</div>
+                <div class="demo-container green padded">Enfant 3</div>
+                <div class="demo-container green padded">Enfant 4</div>
+                <div class="demo-container green padded">Enfant 5</div>
+                <div class="demo-container green padded">Enfant 6</div>
+                <div class="demo-container green padded">Enfant 7</div>
+                <div class="demo-container green padded">Enfant 8</div>
+                <div class="demo-container green padded">Enfant 9</div>
+                <div class="demo-container green padded">Enfant 10</div>
+            </div>
+
+            <!-- flex-wrap: wrap; -->
+            <h3><code>flex-wrap: wrap</code></h3>
+            <div class="demo-container blue flex flex-wrap-wrap">
+                <div class="demo-container green padded">Enfant 1</div>
+                <div class="demo-container green padded">Enfant 2</div>
+                <div class="demo-container green padded">Enfant 3</div>
+                <div class="demo-container green padded">Enfant 4</div>
+                <div class="demo-container green padded">Enfant 5</div>
+                <div class="demo-container green padded">Enfant 6</div>
+                <div class="demo-container green padded">Enfant 7</div>
+                <div class="demo-container green padded">Enfant 8</div>
+                <div class="demo-container green padded">Enfant 9</div>
+                <div class="demo-container green padded">Enfant 10</div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>La propriété <code>align-items</code></h2>
+
+            <h3><code>align-items: flex-stretch</code> (par défaut)</h3>
+            <div class="demo-container purple expanded flex align-items-stretch">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+            <div class="demo-container purple flex-direction-column flex align-items-stretch">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+            
+            <h3><code>align-items: flex-start</code></h3>
+            <div class="demo-container purple expanded flex align-items-flex-start">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+            <div class="demo-container purple flex-direction-column flex align-items-flex-start">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+        
+            <h3><code>align-items: flex-end</code></h3>
+            <div class="demo-container purple expanded flex align-items-flex-end">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+            <div class="demo-container purple flex-direction-column flex align-items-flex-end">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+                
+            <h3><code>align-items: center</code></h3>
+            <div class="demo-container purple expanded flex align-items-center">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+            <div class="demo-container purple flex-direction-column flex align-items-center">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>La propriété <code>order</code></h2>
+
+            <div class="demo-container blue flex justify-content-space-around">
+                <div class="demo-container green padded">Enfant 1<div class="small">(order: 0)</div></div>
+                <div class="demo-container green padded">Enfant 2<div class="small">(order: 0)</div></div>
+                <div class="demo-container orange padded order-plus-1">Enfant 3<div class="small">(order: +1)</div></div>
+                <div class="demo-container orange padded order-minus-1">Enfant 4<div class="small">(order: -1)</div></div>
+                <div class="demo-container green padded">Enfant 5<div class="small">(order: 0)</div></div>
+            </div>
+            <div class="demo-container blue flex align-items-flex-start flex-direction-column">
+                <div class="demo-container green padded">Enfant 1<div class="small">(order: 0)</div></div>
+                <div class="demo-container green padded">Enfant 2<div class="small">(order: 0)</div></div>
+                <div class="demo-container orange padded order-plus-1">Enfant 3<div class="small">(order: +1)</div></div>
+                <div class="demo-container orange padded order-minus-1">Enfant 4<div class="small">(order: -1)</div></div>
+                <div class="demo-container green padded">Enfant 5<div class="small">(order: 0)</div></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer = pied de la page, souvent indentique d'une page à l'autre -->
+    <footer>
+        <div class="container">
+            &copy; DWWM avril 2021 Grenoble
+        </div>
+    </footer>
+
+</body>
+</html>
