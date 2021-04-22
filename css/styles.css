@@ -5,6 +5,11 @@ body {
     line-height: 1.5;
     background-color: #f0f0f0;
     color: #101010;
+    /* Ceci permet de faire en sorte que le footer reste collé au bas de la fen-etre de navigation même si le contenu de la page n'est pas suffisant pour la remplir */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 code {
@@ -32,14 +37,17 @@ h3 {
 }
 
 /* Cette règle permet de définir l'affichage de tous les paragraphes */
- {
+p {
     text-align: justify;
     margin-bottom: 1.5rem;
 }
 
 header {
+    position: sticky;
+    top: 0;
     background-color: midnightblue;
     color: #f0f0f0;
+    z-index: 100;
 }
 
 main {
