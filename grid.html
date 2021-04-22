@@ -1,0 +1,120 @@
+<!-- Ceci est un commentaire, il permet de donner des infomartions destinées à d'autres développeurs et n'a aucune incidence sur le fonctionnement de le page -->
+
+<!DOCTYPE html>
+<html>
+<!-- head = méta-données, des données qui ne s'affichent pas dans la page en tant que telles, mais qui sont nécessaires pour que l'affichage se passe comme prévu -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <!-- title = titre de la page, visible dans l'onglet du navigateur -->
+    <title>Découverte du langage HTML</title>
+    <!-- link = lien vers des ressources externes, permet entre autres de charger les fichiers CSS pour appliquer du style dans la page -->
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/langfr-130px-HTML5_logo_and_wordmark.svg.png" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<!-- body = corps de la page, tout ce qu'on voit affiché dans le navigateur -->
+<body>
+    <!-- header = en-tête de la page, souvent indentique d'une page à l'autre -->
+    <header>
+        <nav class="container">
+            <a href="/">
+                <img id="nav-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/langfr-130px-HTML5_logo_and_wordmark.svg.png" alt="Logo du site" />
+                Nom du site
+            </a>
+            <ul class="nav-list">
+                <li class="nav-item">
+                   <a href="/">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/flex.html">Flex</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Lien 2</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main = contenu principal de la page, souvent spécifique à chaque page -->
+    <main class="container">
+        <h1>Découverte de Grid</h1>
+
+        <section>
+            <h2>Introduction</h2>
+            <p>CSS3 met également à notre disposition un autre système permettant de régler les problèmes de placement des éléments: grid.</p>
+
+            <h3>Sans grid</h3>
+            <div class="demo-container purple">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+                <div class="demo-container orange padded">Enfant 4</div>
+            </div>
+
+            <h3>Avec grid</h3>
+            <p><code>grid-template-columns: repeat(2, 1fr);</code></p>
+            <div class="demo-container purple grid grid2x2">
+                <div class="demo-container orange padded">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+                <div class="demo-container orange padded">Enfant 4</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>L'unité fr</h2>
+            <p>L'unite fr signifie une fraction de l'espace disponible. Elle permet de régler la taille des différentes colonnes les unes par rapport aux autres.</p>
+            <p><strong>Exemple: </strong><code>grid-template-columns: 2fr 1fr 1fr;</code></p>
+            <div class="demo-container blue grid" id="grid-fr">
+                <div class="demo-container green padded">Enfant 1</div>
+                <div class="demo-container green padded">Enfant 2</div>
+                <div class="demo-container green padded">Enfant 3</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Le mot-clé span</h2>
+            <p>Le mot-clé span, utilisé dans les propriétés <code>grid-column</code> et <code>grid-row</code> des enfants, permet d'indiquer à un enfant qu'il doit prendre plusieurs colonnes ou lignes dans la grille.</p>
+            <p>Exemple enfant 1: <code>grid-column: span 2; grid-row: span 2;</code></p>
+            <p>Exemple enfant 5: <code>grid-column: span 2;</code></p>
+            <div class="demo-container purple grid" id="grid-span">
+                <div class="demo-container orange padded column-span2 row-span2">Enfant 1</div>
+                <div class="demo-container orange padded">Enfant 2</div>
+                <div class="demo-container orange padded">Enfant 3</div>
+                <div class="demo-container orange padded">Enfant 4</div>
+                <div class="demo-container orange padded column-span2">Enfant 5</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>La propriété <code>grid-template-areas</code></h2>
+            <p>La propriété <code>grid-template-areas</code> permet d'affecter des éléments à une zone de la grille pour contrôler leur positionnement (place dans la grille, nombre de lignes/de colonnes occupées) de manière déclarative.</p>
+            <p>Exemple:
+                <code><pre>grid-template-areas:
+    "nv nv nv nv"
+    ".  hd hd ."
+    ".  mn sd ."
+    "ft ft ft ft"
+;</pre></code>
+            </p>
+            <div class="demo-container blue grid" id="grid-template-areas">
+                <div class="demo-container green padded" id="grid-template-areas-navbar">Navbar</div>
+                <div class="demo-container green padded" id="grid-template-areas-header">Header</div>
+                <div class="demo-container green padded" id="grid-template-areas-main">Main</div>
+                <div class="demo-container green padded" id="grid-template-areas-sidebar">Sidebar</div>
+                <div class="demo-container green padded" id="grid-template-areas-footer">Footer</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer = pied de la page, souvent indentique d'une page à l'autre -->
+    <footer>
+        <div class="container">
+            &copy; DWWM avril 2021 Grenoble
+        </div>
+    </footer>
+
+</body>
+</html>

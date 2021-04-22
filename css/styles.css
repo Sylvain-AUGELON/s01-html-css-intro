@@ -13,6 +13,7 @@ body {
 }
 
 code {
+    display: inline-block;
     font-family: 'Courier New', Courier, monospace;
     background-color: rgb(253, 246, 203);
     border: 1px solid gold;
@@ -280,4 +281,59 @@ footer {
 
 .order-plus-1 {
     order: 1;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid.grid2x2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.column-span2 {
+    grid-column: span 2;
+}
+
+.row-span2 {
+    grid-row: span 2;
+}
+
+#grid-fr {
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+#grid-span {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#grid-template-areas {
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 4fr 1fr;
+    grid-template-areas:
+        "nv nv nv nv"
+        ".  hd hd ."
+        ".  mn sd ."
+        "ft ft ft ft"
+    ;
+}
+
+#grid-template-areas-navbar {
+    grid-area: nv;
+}
+
+#grid-template-areas-header {
+    grid-area: hd;
+}
+
+#grid-template-areas-main {
+    grid-area: mn;
+}
+
+#grid-template-areas-sidebar {
+    grid-area: sd;
+}
+
+#grid-template-areas-footer {
+    grid-area: ft;
 }
